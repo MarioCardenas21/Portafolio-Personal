@@ -1,80 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre Mí</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @keyframes gradientShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAP Ferreteria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    @keyframes shine-border {
+      0% { box-shadow: 0 0 0px 0px rgba(0, 204, 255, 0.3); }
+      50% { box-shadow: 0 0 15px 5px rgba(0, 204, 255, 0.6); }
+      100% { box-shadow: 0 0 0px 0px rgba(0, 204, 255, 0.3); }
+    }
+    .animate-border {
+      animation: shine-border 2s infinite ease-in-out;
+    }
 
-      .bg-animated {
-        background: linear-gradient(-45deg, #0f172a, #1e293b, #111827, #0f172a);
-        background-size: 400% 400%;
-        animation: gradientShift 15s ease infinite;
-      }
-    </style>
-  </head>
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-  <body class="bg-animated text-white font-sans min-h-screen flex items-center justify-center px-4">
-    <main class="w-full max-w-6xl flex flex-col md:flex-row items-center md:items-start gap-10 py-16">
+    .bg-animated {
+      background: linear-gradient(-45deg, #0f172a, #1e293b, #0c0c0c, #111827);
+      background-size: 300% 300%;
+      animation: gradientMove 10s ease infinite;
+    }
+  </style>
+</head>
+<body class="bg-animated text-white font-sans">
 
-      <!-- Columna de imagen -->
-      <div class="w-full md:w-1/3 flex justify-center md:justify-end">
-        <img src="img/foto.jpeg" alt="Tu Nombre"
-             class="w-60 h-60 rounded-full border-4 border-blue-500 shadow-lg object-cover hover:scale-105 transition-transform duration-500" />
-      </div>
+  <main class="min-h-screen px-6 py-12 flex flex-col items-center text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-up">Símbolo del sistema con IA</h1>
+    <p class="max-w-3xl text-lg text-gray-300 mb-10" data-aos="fade-up" data-aos-delay="100">
+   FerreGest es un sistema de gestión integral (SAP) diseñado específicamente para ferreterías. Su interfaz intuitiva permite controlar inventario, proveedores, ventas y facturación en tiempo real. Incluye reportes automatizados, seguimiento de productos por categoría y alertas de stock bajo. Todo, en una plataforma visualmente limpia y accesible desde cualquier dispositivo.
 
-      <!-- Columna de contenido -->
-      <div class="w-full md:w-2/3 space-y-8">
-        <h1 class="text-4xl md:text-6xl font-bold relative inline-block">
-          <span class="relative z-10">Sobre Mí</span>
-          <span class="absolute left-0 bottom-1 w-full h-1 bg-blue-500 z-0 rounded-full"></span>
-        </h1>
+    Características principales:
 
-        <div class="bg-white/10 border border-white/20 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl space-y-4 text-lg text-gray-100">
-          <p>Hola, soy <strong>[Tu Nombre]</strong>, un apasionado del desarrollo de software con amor por la tecnología y la creatividad.</p>
-          <p>Me dedico a construir experiencias web modernas, elegantes y funcionales, cuidando tanto el diseño como el rendimiento.</p>
-          <p><strong>Tecnologías:</strong> HTML5, Tailwind CSS, JavaScript, Python, Docker, Git.</p>
-        </div>
+    Gestión de inventario con escaneo de códigos de barras.
 
-        <!-- Línea de tiempo -->
-        <section>
-          <h2 class="text-2xl font-semibold mb-4">📘 Formación y Experiencia</h2>
-          <ol class="border-l border-gray-600 space-y-6 pl-4">
-            <li>
-              <div class="ml-4">
-                <span class="text-blue-400 font-bold">2024 - Actualidad</span>
-                <p class="text-gray-300">Desarrollador Web Freelance - Proyectos con tecnologías modernas.</p>
-              </div>
-            </li>
-            <li>
-              <div class="ml-4">
-                <span class="text-blue-400 font-bold">2023 - 2024</span>
-                <p class="text-gray-300">Estudios en Desarrollo de Software - Enfoque en web, backend y DevOps.</p>
-              </div>
-            </li>
-            <li>
-              <div class="ml-4">
-                <span class="text-blue-400 font-bold">2022 - 2023</span>
-                <p class="text-gray-300">Inicios en programación autodidacta con Python y JavaScript.</p>
-              </div>
-            </li>
-          </ol>
-        </section>
+    Módulo de compras y proveedores.
 
-        <!-- Botón volver -->
-        <div>
-          <a href="index.html"
-             class="inline-block px-6 py-3 text-lg font-semibold text-white border border-white/30 rounded-full backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-md">
-            ← Volver al inicio
-          </a>
-        </div>
-      </div>
-    </main>
-  </body>
+    Control de ventas con generación automática de facturas.
+
+    Reportes visuales de rendimiento y stock.
+
+    Panel de usuario moderno con diseño minimalista.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mb-10" data-aos="fade-up" data-aos-delay="200">
+      <img src="img/mishell1.png" class="rounded-xl animate-border transform transition duration-300 scale-105 cursor-pointer" onclick="openLightbox(this.src)" />
+      <img src="img/mishell2.png" class="rounded-xl animate-border transform transition duration-300 scale-105 cursor-pointer" onclick="openLightbox(this.src)" />
+      <img src="img/mishell3.png" class="rounded-xl animate-border transform transition duration-300 scale-105 cursor-pointer" onclick="openLightbox(this.src)" />
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
+      <a href="https://drive.google.com/file/d/1K-mtcTukG12se9rG__4IEZ3OWNdcYN8l/view" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Ver Demo</a>
+      <a href="https://drive.google.com/drive/folders/1EAGTljpwgIVeQ1s9hpLcOFi0emvAE5PH" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Código Fuente</a>
+      <a href="#" class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Más Información</a>
+    </div>
+  </main>
+
+  <div class="text-center mt-12" data-aos="fade-up">
+    <a href="portafolio.html" class="inline-block px-6 py-3 text-lg font-semibold text-white border border-white/30 rounded-full backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-md">
+      ← Volver al inicio
+    </a>
+  </div>
+
+  <footer class="text-center text-gray-500 text-sm py-6">
+    © 2025 Mario Cardenas. Todos los derechos reservados.
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+    <div class="relative">
+      <button onclick="closeLightbox()" class="absolute top-2 right-2 text-white text-2xl font-bold">×</button>
+      <img id="lightbox-img" src="" class="max-w-full max-h-[90vh] rounded-xl border-4 border-blue-400 shadow-2xl">
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function (e) {
+      if (e.target === this) closeLightbox();
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
 </html>
