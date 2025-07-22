@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Mí</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      .bg-animated {
+        background: linear-gradient(-45deg, #0f172a, #1e293b, #111827, #0f172a);
+        background-size: 400% 400%;
+        animation: gradientShift 20s ease infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-animated text-white font-sans min-h-screen">
+    <main class="flex flex-col md:flex-row min-h-screen">
+
+      <!-- Columna izquierda: Imagen y nombre -->
+      <aside class="md:w-1/2 flex flex-col items-center justify-center p-10 bg-gray-900/30 backdrop-blur-md border-r border-white/10">
+        <img src="img/foto.jpeg" alt="Tu Nombre"
+             class="w-64 h-64 rounded-full border-4 border-blue-500 shadow-xl object-cover mb-6 hover:scale-105 transition-transform duration-500" />
+        <h1 class="text-4xl md:text-5xl font-bold mb-2">Mario Cardenas</h1>
+        <h2 class="text-xl md:text-2xl text-blue-400 mb-6">Desarrollador de Software</h2>
+        <p class="text-center text-gray-300 max-w-xs">Apasionado por crear soluciones útiles, elegantes y funcionales que impacten positivamente al mundo.</p>
+      </aside>
+
+      <!-- Columna derecha: Contenido -->
+      <section class="md:w-1/2 p-10 space-y-10 overflow-y-auto">
+
+        <!-- Biografía -->
+        <div>
+          <h2 class="text-3xl font-semibold mb-4">Biografía</h2>
+          <p class="text-gray-300 leading-relaxed">
+            Soy un desarrollador con visión creativa y mentalidad analítica. Me dedico a construir interfaces modernas, intuitivas y sistemas backend robustos.
+            Me motiva la mejora continua, el aprendizaje de nuevas tecnologías y trabajar en equipo para alcanzar soluciones de alto impacto.
+          </p>
+        </div>
+
+        <!-- Habilidades técnicas -->
+        <div>
+          <h2 class="text-3xl font-semibold mb-4">Habilidades Técnicas</h2>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-gray-200 mb-1">HTML5 / CSS3 / Tailwind</label>
+              <div class="w-full bg-gray-700 rounded-full h-4">
+                <div class="bg-blue-500 h-4 rounded-full w-[90%]"></div>
+              </div>
+            </div>
+            <div>
+              <label class="block text-gray-200 mb-1">JavaScript / React</label>
+              <div class="w-full bg-gray-700 rounded-full h-4">
+                <div class="bg-blue-400 h-4 rounded-full w-[50%]"></div>
+              </div>
+            </div>
+            <div>
+              <label class="block text-gray-200 mb-1">Python / FastAPI</label>
+              <div class="w-full bg-gray-700 rounded-full h-4">
+                <div class="bg-blue-300 h-4 rounded-full w-[50%]"></div>
+              </div>
+            </div>
+            <div>
+              <label class="block text-gray-200 mb-1">Docker / Git / Linux</label>
+              <div class="w-full bg-gray-700 rounded-full h-4">
+                <div class="bg-blue-200 h-4 rounded-full w-[75%]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Herramientas favoritas -->
+        <div>
+          <h2 class="text-3xl font-semibold mb-4">Herramientas Favoritas</h2>
+          <ul class="list-disc list-inside text-gray-300 space-y-1">
+            <li>VS Code + GitHub Copilot</li>
+            <li>Postman y Docker Desktop</li>
+            <li>Figma y Notion para diseño y organización</li>
+            <li>Terminal zsh personalizada</li>
+          </ul>
+        </div>
+
+        <!-- Valores personales -->
+        <div>
+          <h2 class="text-3xl font-semibold mb-4">Valores Personales</h2>
+          <ul class="list-disc list-inside text-gray-300 space-y-1">
+            <li>Pasión por el aprendizaje continuo</li>
+            <li>Colaboración y empatía en equipo</li>
+            <li>Enfoque en la calidad y detalle</li>
+            <li>Adaptabilidad ante desafíos técnicos</li>
+          </ul>
+        </div>
+
+        <!-- Línea de tiempo -->
+        <div>
+          <h2 class="text-3xl font-semibold mb-4">📘 Formación y Experiencia</h2>
+          <ol class="border-l border-gray-600 space-y-6 pl-4">
+            <li>
+              <div class="ml-4">
+                <span class="text-blue-400 font-bold">2024 - Actualidad</span>
+                <p class="text-gray-300">Desarrollador Web Freelance - Proyectos con tecnologías modernas.</p>
+              </div>
+            </li>
+            <li>
+              <div class="ml-4">
+                <span class="text-blue-400 font-bold">2023 - 2024</span>
+                <p class="text-gray-300">Formación en Desarrollo de Software - Backend, DevOps y diseño de sistemas.</p>
+              </div>
+            </li>
+            <li>
+              <div class="ml-4">
+                <span class="text-blue-400 font-bold">2022 - 2023</span>
+                <p class="text-gray-300">Autodidacta en Python y JavaScript, primeros proyectos personales.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Botón volver -->
+        <div class="pt-4">
+          <a href="index.html"
+             class="inline-block px-6 py-3 text-lg font-semibold text-white border border-white/30 rounded-full backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-md">
+            ← Volver al inicio
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
